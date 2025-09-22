@@ -1,0 +1,94 @@
+/* Apple 官網風格 for labelp */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* 導覽列 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(255,255,255,0.9);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: #0071e3;
+}
+
+/* Hero 區 */
+.hero {
+  text-align: center;
+  padding: 150px 20px;
+  background: #f5f5f7;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0071e3;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #005bb5;
+}
+
+/* 產品卡片 */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 80px 50px;
+  background: #fff;
+}
+.product {
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.product img:hover {
+  transform: scale(1.05);
+}
+.product h2 {
+  margin: 15px 0;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 40px 20px;
+}
+.footer p {
+  margin: 5px 0;
+}
