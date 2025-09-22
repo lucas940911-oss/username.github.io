@@ -1,52 +1,124 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>labelp</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="labelp — Apple 風格的極簡品牌網站入口與周邊商店" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27><text y=%2750%27 font-size=%2750%27>🍎</text></svg>">
 </head>
 <body>
-  <!-- 導覽列 -->
-  <header class="navbar">
-    <div class="logo">labelp</div>
-    <nav>
-      <a href="#home">首頁</a>
-      <a href="#products">產品</a>
-      <a href="#contact">聯絡</a>
+  <!-- 頂部導覽列 -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="labelp">labelp</div>
+    <nav class="nav" role="navigation" aria-label="主選單">
+      <a href="#platforms" class="nav-link">平台</a>
+      <a href="#about" class="nav-link">關於</a>
+      <a href="#contact" class="nav-link">聯絡</a>
     </nav>
   </header>
 
-  <!-- 首頁 Hero 區 -->
-  <section id="home" class="hero">
-    <h1>labelp</h1>
-    <p>Think Different. Minimal, Elegant, Yours.</p>
-    <a href="#products" class="btn">了解更多</a>
-  </section>
-
-  <!-- 產品區 -->
-  <section id="products" class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/400x250" alt="Product 1">
-      <h2>labelp One</h2>
-      <a href="#" class="btn">探索</a>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/400x250" alt="Product 2">
-      <h2>labelp Studio</h2>
-      <a href="#" class="btn">探索</a>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/400x250" alt="Product 3">
-      <h2>labelp Pro</h2>
-      <a href="#" class="btn">探索</a>
+  <!-- Hero 區 -->
+  <section id="home" class="hero" role="region" aria-label="首頁宣傳區">
+    <div class="hero-inner">
+      <h1 class="brand">labelp</h1>
+      <p class="tagline">Minimal. Elegant. Yours.</p>
+      <a class="btn btn-primary" href="#platforms" aria-label="前往平台選擇">開始探索</a>
     </div>
   </section>
 
-  <!-- 聯絡區 -->
-  <footer id="contact" class="footer">
-    <p>聯絡我們：contact@labelp.com</p>
-    <p>© 2025 labelp</p>
+  <!-- 平台選擇：YouTube / TikTok / Instagram / 周邊商品 -->
+  <section id="platforms" class="section platforms" role="region" aria-labelledby="platforms-title">
+    <h2 id="platforms-title" class="section-title">選擇你的入口</h2>
+
+    <div class="grid">
+      <!-- YouTube -->
+      <article class="card" aria-labelledby="yt-title">
+        <div class="card-media" aria-hidden="true">
+          <!-- YouTube 紅色條形 + 圓角播放鍵 -->
+          <svg class="icon" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+            <rect x="0" y="10" width="48" height="28" rx="12" ry="12"></rect>
+            <polygon points="20,18 34,24 20,30"></polygon>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 id="yt-title" class="card-title">YouTube 品牌網站</h3>
+          <p class="card-desc">長影片、教學與完整敘事的最佳舞台。</p>
+          <a class="btn btn-plain" href="#" aria-label="開啟 YouTube 品牌網站">瞭解更多</a>
+        </div>
+      </article>
+
+      <!-- TikTok -->
+      <article class="card" aria-labelledby="tt-title">
+        <div class="card-media" aria-hidden="true">
+          <!-- TikTok 音符感圖形 -->
+          <svg class="icon" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+            <path d="M30 6c0 6 6 12 12 12v6c-5.9 0-10.9-3.1-12-6v12c0 6.6-5.4 12-12 12S6 36.6 6 30s5.4-12 12-12c1.4 0 2.7.2 4 .7V26a6 6 0 1 1-4-1.5V6h12z"></path>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 id="tt-title" class="card-title">TikTok 品牌網站</h3>
+          <p class="card-desc">短影音流量入口，快節奏也能保持質感。</p>
+          <a class="btn btn-plain" href="#" aria-label="開啟 TikTok 品牌網站">瞭解更多</a>
+        </div>
+      </article>
+
+      <!-- Instagram -->
+      <article class="card" aria-labelledby="ig-title">
+        <div class="card-media" aria-hidden="true">
+          <!-- Instagram 相機框感 -->
+          <svg class="icon" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+            <rect x="6" y="6" width="36" height="36" rx="10" ry="10"></rect>
+            <circle cx="24" cy="24" r="9"></circle>
+            <circle cx="33.5" cy="14.5" r="2.5"></circle>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 id="ig-title" class="card-title">Instagram 品牌網站</h3>
+          <p class="card-desc">圖像主導的風格呈現，視覺與故事並重。</p>
+          <a class="btn btn-plain" href="#" aria-label="開啟 Instagram 品牌網站">瞭解更多</a>
+        </div>
+      </article>
+
+      <!-- Merch -->
+      <article class="card" aria-labelledby="merch-title">
+        <div class="card-media" aria-hidden="true">
+          <!-- Merch 貼紙/購物袋 -->
+          <svg class="icon" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+            <path d="M12 18h24l-2 22H14L12 18z"></path>
+            <path d="M17 18a7 7 0 1 1 14 0" fill="none" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 id="merch-title" class="card-title">周邊商品</h3>
+          <p class="card-desc">質感選品、限量聯名，打造你的 labelp 生活感。</p>
+          <a class="btn btn-primary" href="#" aria-label="前往周邊商品">前往商店</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 關於 -->
+  <section id="about" class="section about" role="region" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title">關於 labelp</h2>
+    <p class="about-text">
+      labelp 專注於以極簡與人性化為核心，將內容、設計與產品整合成易於理解、好用且有質感的體驗。
+    </p>
+  </section>
+
+  <!-- 聯絡 -->
+  <footer id="contact" class="footer" role="contentinfo" aria-label="頁尾與聯絡">
+    <div class="footer-inner">
+      <div class="contact">
+        <h3 class="footer-title">聯絡我們</h3>
+        <p><a class="link" href="mailto:contact@labelp.com">contact@labelp.com</a></p>
+      </div>
+      <div class="legal">
+        <p>© 2025 labelp</p>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
