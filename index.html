@@ -11,7 +11,7 @@
   <section class="hero">
     <h1 class="logo">Label P</h1>
     <p class="tagline">Translating Hip-Hop Culture, Word by Word.</p>
-    <a href="#songs" class="btn">探索翻譯歌曲</a>
+    <a href="#merch" class="btn">探索周邊商品</a>
   </section>
 
   <!-- Songs -->
@@ -19,7 +19,9 @@
     <h2>最新翻譯歌曲</h2>
     <div class="grid">
       <div class="card">
-        <img src="https://via.placeholder.com/400x400.png?text=Kendrick+Lamar" alt="HUMBLE.">
+        <!-- Instagram Embed -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/XXXXXXXXX/" data-instgrm-version="14" style="background:#000; border:0; margin:0 auto; max-width:400px;"></blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
         <h3>HUMBLE. — Kendrick Lamar</h3>
         <a href="#" class="btn-outline">查看翻譯</a>
       </div>
@@ -28,12 +30,30 @@
         <h3>God’s Plan — Drake</h3>
         <a href="#" class="btn-outline">查看翻譯</a>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x400.png?text=Travis+Scott" alt="SICKO MODE">
-        <h3>SICKO MODE — Travis Scott</h3>
-        <a href="#" class="btn-outline">查看翻譯</a>
-      </div>
     </div>
+  </section>
+
+  <!-- Fan Suggestion -->
+  <section class="about">
+    <h2>粉絲推薦歌曲</h2>
+    <p>告訴我們你想看的歌詞翻譯！</p>
+    <form action="https://docs.google.com/forms/d/e/你的Google表單ID/formResponse" method="POST" target="_blank">
+      <input type="text" name="entry.歌手" placeholder="歌手名稱" required style="padding:10px; margin:5px;">
+      <input type="text" name="entry.歌曲" placeholder="歌曲名稱" required style="padding:10px; margin:5px;">
+      <textarea name="entry.訊息" placeholder="想說的話..." rows="3" style="padding:10px; margin:5px;"></textarea>
+      <br>
+      <button type="submit" class="btn">送出推薦</button>
+    </form>
+  </section>
+
+  <!-- Playlist -->
+  <section class="songs">
+    <h2>已製作影片歌單</h2>
+    <ul style="list-style:none; padding:0; text-align:center;">
+      <li><a href="https://www.youtube.com/watch?v=tvTRZJ-4EyI" target="_blank">Kendrick Lamar — HUMBLE.</a></li>
+      <li><a href="https://www.youtube.com/watch?v=xpVfcZ0ZcFM" target="_blank">Drake — God’s Plan</a></li>
+      <li><a href="https://www.youtube.com/watch?v=6ONRf7h3Mdk" target="_blank">Travis Scott — SICKO MODE</a></li>
+    </ul>
   </section>
 
   <!-- About -->
@@ -43,7 +63,7 @@
   </section>
 
   <!-- Merch -->
-  <section class="merch">
+  <section id="merch" class="merch">
     <h2>周邊商品</h2>
     <div class="grid">
       <div class="card">
