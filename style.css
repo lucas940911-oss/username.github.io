@@ -1,7 +1,7 @@
 body {
   margin:0;
   background:#000;
-  color:#fff;
+  color:#eee; /* 改成柔和灰白，避免長文刺眼 */
   font-family: 'Helvetica Neue', Noto Sans TC, sans-serif;
 }
 
@@ -13,11 +13,18 @@ body {
 }
 .logo {
   font-family: Impact, sans-serif;
-  font-size:4rem; margin:0;
+  font-size:4rem; margin:0; color:#fff; /* 保持標誌純白 */
 }
-.tagline { margin:10px 0 20px; color:#ccc; font-size:1.2rem; }
+.tagline { margin:10px 0 20px; color:#bbb; font-size:1.2rem; }
+
+/* 主按鈕 */
 .btn {
-  padding:12px 24px; background:#fff; color:#000; text-decoration:none; font-weight:bold;
+  padding:12px 24px; 
+  background:transparent; 
+  border:2px solid #00e0ff; 
+  color:#00e0ff; 
+  text-decoration:none; 
+  font-weight:bold;
   border-radius:6px;
   transition:0.3s;
 }
@@ -25,7 +32,7 @@ body {
 
 /* Songs */
 .songs { padding:60px 20px; background:#111; }
-.songs h2 { text-align:center; margin-bottom:30px; font-size:2rem; }
+.songs h2 { text-align:center; margin-bottom:30px; font-size:2rem; color:#fff; }
 .grid {
   display:grid; gap:20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -35,23 +42,33 @@ body {
   text-align:center; transition:0.3s;
 }
 .card:hover { box-shadow:0 0 20px #00e0ff; }
-.card img { width:100%; border-radius:8px; margin-bottom:15px; }
-.card h3 { margin:10px 0; font-size:1.1rem; }
+.card img { 
+  width:100%; 
+  aspect-ratio: 1/1; /* 固定比例為正方形 */
+  object-fit: cover; 
+  border-radius:8px; 
+  margin-bottom:15px; 
+}
+.card h3 { margin:10px 0; font-size:1.1rem; color:#fff; }
+
+/* 次要按鈕 */
 .btn-outline {
-  display:inline-block; padding:8px 16px; border:1px solid #fff; color:#fff; text-decoration:none;
+  display:inline-block; padding:8px 16px; 
+  border:1px solid #e600ff; color:#e600ff; 
+  text-decoration:none;
   border-radius:6px;
   transition:0.3s;
 }
-.btn-outline:hover { background:#e600ff; border-color:#e600ff; }
+.btn-outline:hover { background:#e600ff; color:#000; }
 
 /* About */
 .about { padding:60px 20px; background:#fff; color:#000; text-align:center; }
 .about h2 { margin-bottom:20px; font-size:2rem; }
-.about p { max-width:600px; margin:0 auto; line-height:1.6; }
+.about p { max-width:600px; margin:0 auto; line-height:1.6; color:#333; }
 
 /* Merch */
 .merch { padding:60px 20px; background:#111; }
-.merch h2 { text-align:center; margin-bottom:30px; font-size:2rem; }
+.merch h2 { text-align:center; margin-bottom:30px; font-size:2rem; color:#fff; }
 .merch .card h3 { color:#fff; }
 .merch .btn { margin-top:10px; }
 
@@ -59,3 +76,10 @@ body {
 .footer { padding:20px; text-align:center; font-size:0.9rem; color:#999; background:#000; }
 .footer a { color:#00e0ff; text-decoration:none; }
 .footer a:hover { text-decoration:underline; }
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+  .logo { font-size:2.5rem; }
+  .tagline { font-size:1rem; }
+  .songs h2, .merch h2, .about h2 { font-size:1.5rem; }
+}
