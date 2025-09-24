@@ -44,61 +44,59 @@ body {
 }
 
 .form-card {
-  background:#181818;
+  background: linear-gradient(145deg, #181818, #1f1f1f);
   border-radius:16px;
-  padding:40px 30px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  padding:50px 40px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);
 }
 
 .suggestion h2 {
   margin-bottom:10px;
-  font-size:1.8rem;
-  font-weight:600;
+  font-size:1.9rem;
+  font-weight:700;
   text-align:center;
 }
 .form-sub {
-  margin-bottom:30px;
+  margin-bottom:35px;
   font-size:1rem;
   color:#bbb;
   text-align:center;
 }
 
 .form-group {
-  margin-bottom:20px;
+  margin-bottom:24px;
   text-align:left;
 }
 .form-group label {
   display:block;
   margin-bottom:6px;
   font-size:0.9rem;
-  color:#ccc;
+  color:#aaa;
 }
 
-/* 修正輸入框樣式 */
+/* 輸入框 */
 .input, .textarea {
-  -webkit-appearance: none; /* 移除 iOS 預設樣式 */
+  -webkit-appearance: none;
   appearance: none;
-
   width:100%;
   background:#222;
   color:#eee;
   border:1px solid #333;
-  border-radius:10px; /* 小圓角，避免膠囊化 */
-  padding:12px 14px;
+  border-radius:12px;
+  padding:14px 16px;
   font-size:1rem;
   line-height:1.4;
   transition:0.2s;
 }
-.input::placeholder, .textarea::placeholder { color:#777; }
+.input::placeholder, .textarea::placeholder { color:#666; }
 .input:focus, .textarea:focus {
   border:1px solid #00e0ff;
-  box-shadow:0 0 6px rgba(0,224,255,0.4) inset,
-             0 0 6px rgba(0,224,255,0.6);
+  box-shadow:0 0 10px rgba(0,224,255,0.4);
   outline:none;
 }
 textarea {
   resize: vertical;
-  border-radius:10px;
+  border-radius:12px;
 }
 button.btn { cursor: pointer; }
 
