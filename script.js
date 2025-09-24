@@ -16,4 +16,3 @@ document.querySelectorAll('.btn-hero, .btn-submit').forEach(button => {
     }, 900);
   });
 });
- 
