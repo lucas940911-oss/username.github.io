@@ -19,15 +19,16 @@ body {
   margin:0;
   color:#fff;
   letter-spacing:2px;
-  /* text-transform: uppercase; 🔥 移除，保留大小寫 */
+  /* 移除 text-transform: uppercase;，保留 Label P */
 }
 .tagline {
   margin:24px 0 32px;
+  font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif; /* ✅ Roboto Condensed */
   font-weight:400;
   color:#bbb;
   font-size:1.1rem;
   letter-spacing:1px;
-  white-space: nowrap; /* ✅ 不換行 */
+  white-space: nowrap;
 }
 
 /* Hero 按鈕 */
@@ -47,7 +48,7 @@ body {
 .btn-hero:hover {
   background: linear-gradient(90deg, #00e0ff, #33e8ff);
   color:#000;
-  box-shadow:0 0 18px rgba(0,224,255,0.6); /* 漸變光暈 */
+  box-shadow:0 0 18px rgba(0,224,255,0.6);
 }
 .btn-hero:active { transform: scale(0.95); }
 
@@ -73,11 +74,12 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.55);
   border: 1px solid rgba(255,255,255,0.08);
   text-align: center;
-  box-sizing: border-box; /* ✅ 防止跑版 */
+  box-sizing: border-box;
 }
 .form-card h2 {
   margin-bottom: 12px;
   font-size: 1.7rem;
+  font-family: Impact, sans-serif; /* ✅ 與 Logo 呼應，Hip-Hop 感 */
   font-weight: 700;
   color: #fff;
 }
@@ -110,7 +112,7 @@ body {
   font-size:1rem;
   line-height:1.4;
   transition:0.25s;
-  box-sizing:border-box; /* ✅ 不會超出卡片 */
+  box-sizing:border-box;
 }
 .input::placeholder, .textarea::placeholder { color:#666; }
 .input:focus, .textarea:focus {
@@ -157,7 +159,7 @@ textarea { resize: vertical; }
 .footer-links {
   display:flex;
   justify-content:center;
-  flex-wrap:wrap; /* ✅ 小螢幕會換行 */
+  flex-wrap:wrap;
   gap:18px;
   max-width: 600px;
   margin:0 auto;
@@ -172,14 +174,14 @@ textarea { resize: vertical; }
 }
 .footer-links a:hover {
   color:#00e0ff;
-  text-shadow: 0 0 8px rgba(0,224,255,0.6); /* 微光暈 */
+  text-shadow: 0 0 8px rgba(0,224,255,0.6);
 }
 
 /* 響應式 */
 @media (max-width: 600px) {
   .logo { font-size:3rem; }
   .tagline {
-    font-size:0.9rem;  /* ✅ 手機版自動縮小，塞進一行 */
+    font-size:0.9rem; /* ✅ 手機自動縮小，單行顯示 */
     margin:20px 0 28px;
     white-space: nowrap;
   }
