@@ -3,7 +3,7 @@ body {
   margin:0;
   background:#000;
   color:#fff;
-  font-family: 'Inter', 'Helvetica Neue', Noto Sans TC, sans-serif;
+  font-family: 'Poppins', 'Helvetica Neue', Noto Sans TC, sans-serif;
   -webkit-font-smoothing: antialiased;
   line-height:1.6;
 }
@@ -12,30 +12,64 @@ body {
 .hero {
   display:flex; flex-direction:column; justify-content:center; align-items:center;
   height:100vh; text-align:center; padding:0 20px;
-  background:linear-gradient(180deg, #000 0%, #121212 100%);
+  position: relative;
+  background:#000;
+  overflow:hidden;
+}
+.hero .overlay {
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.15), transparent 60%),
+              radial-gradient(circle at 70% 60%, rgba(255,0,128,0.1), transparent 60%);
+  animation: glowMove 12s ease-in-out infinite alternate;
+  z-index:0;
+}
+@keyframes glowMove {
+  from { background-position: 30% 40%, 70% 60%; }
+  to   { background-position: 40% 50%, 60% 50%; }
 }
 .logo {
-  font-size:5rem; margin:0; color:#fff; font-weight:700; letter-spacing: 1px;
+  font-family: 'Anton', Impact, sans-serif;
+  font-size:5rem;
+  margin:0;
+  color:#fff;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1;
 }
-.tagline { margin:14px 0 40px; color:#bbb; font-size:1.2rem; font-weight:300; }
+.tagline {
+  margin:14px 0 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  color:#bbb;
+  font-size:1.2rem;
+  letter-spacing:1px;
+  position:relative;
+  z-index:1;
+}
 
 /* Hero 按鈕 */
 .btn-hero {
-  padding:12px 28px; 
-  background:transparent; 
-  border:2px solid #00e0ff; 
-  color:#00e0ff; 
-  text-decoration:none; 
-  font-weight:600;
+  font-family: 'Poppins', sans-serif;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:12px 28px;
+  background:transparent;
+  border:2px solid #00e0ff;
+  color:#00e0ff;
+  text-decoration:none;
   border-radius:999px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  z-index:1;
 }
 .btn-hero:hover {
-  background:#00e0ff; 
-  color:#000; 
+  background:#00e0ff;
+  color:#000;
   box-shadow:0 0 14px #00e0ff;
   transform: translateY(-2px);
 }
@@ -57,10 +91,10 @@ body {
 /* 卡片 */
 .form-card {
   background: rgba(25, 25, 25, 0.65);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border-radius: 20px;
   padding: 60px 40px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
   border: 1px solid rgba(255,255,255,0.08);
   text-align: center;
 }
@@ -68,6 +102,7 @@ body {
   margin-bottom: 12px;
   font-size: 1.9rem;
   font-weight: 700;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 .form-sub {
@@ -107,15 +142,9 @@ body {
   border:1px solid #00e0ff;
   box-shadow:0 0 12px rgba(0,224,255,0.6);
   outline:none;
-  animation: glow 0.5s ease forwards;
 }
-.input:invalid { border:1px solid #e63946; } /* 錯誤提示 */
+.input:invalid { border:1px solid #e63946; }
 textarea { resize: vertical; }
-
-@keyframes glow {
-  from { box-shadow:0 0 0 rgba(0,224,255,0); }
-  to   { box-shadow:0 0 12px rgba(0,224,255,0.6); }
-}
 
 /* 送出推薦 */
 .btn-submit {
@@ -124,12 +153,13 @@ textarea { resize: vertical; }
   padding:16px;
   background:#00e0ff;
   color:#000;
-  font-weight:600;
+  font-weight:700;
   font-size:1rem;
   border:none;
   border-radius:12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
-  text-align:center;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -179,22 +209,18 @@ textarea { resize: vertical; }
   color:#888;
   font-size:0.95rem;
   text-decoration:none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition:color 0.4s ease;
 }
 .footer-links a:hover { color:#00e0ff; }
 
-/* 動畫 */
-@keyframes fadeInUp {
-  from { opacity:0; transform: translateY(20px); }
-  to   { opacity:1; transform: translateY(0); }
-}
-
 /* 響應式 */
 @media (max-width: 600px) {
-  .logo { font-size:2.5rem; }
+  .logo { font-size:2.8rem; }
   .tagline { font-size:1rem; margin-bottom:24px; }
   .form-card { padding:40px 20px; }
-  .btn-hero { font-size:0.95rem; padding:10px 20px; }
-  .btn-submit { font-size:1rem; padding:14px; }
+  .btn-hero { font-size:0.9rem; padding:10px 20px; }
+  .btn-submit { font-size:0.95rem; padding:14px; }
   .input, .textarea { font-size:0.95rem; padding:12px 14px; }
 }
