@@ -3,8 +3,9 @@ body {
   margin:0;
   background:#000;
   color:#fff;
-  font-family: 'Helvetica Neue', Noto Sans TC, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Noto Sans TC, sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height:1.6;
 }
 
 /* Hero */
@@ -14,62 +15,58 @@ body {
   background:linear-gradient(180deg, #000 0%, #121212 100%);
 }
 .logo {
-  font-family: Impact, sans-serif;
-  font-size:5rem; margin:0; color:#fff; letter-spacing: 1px;
+  font-size:5rem; margin:0; color:#fff; font-weight:700; letter-spacing: 1px;
 }
-.tagline { margin:14px 0 24px; color:#bbb; font-size:1.3rem; font-weight:300; }
+.tagline { margin:14px 0 40px; color:#bbb; font-size:1.2rem; font-weight:300; }
 
-/* Hero 按鈕：小膠囊藍框 */
+/* Hero 按鈕 */
 .btn-hero {
-  padding:10px 26px; 
+  padding:12px 28px; 
   background:transparent; 
   border:2px solid #00e0ff; 
   color:#00e0ff; 
   text-decoration:none; 
-  font-weight:bold;
+  font-weight:600;
   border-radius:999px;
   transition: all 0.3s ease;
-  display:inline-block;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  opacity:0;
-  animation: fadeInUp 0.8s ease forwards 0.3s;
 }
 .btn-hero:hover {
   background:#00e0ff; 
   color:#000; 
-  box-shadow:0 0 12px #00e0ff;
+  box-shadow:0 0 14px #00e0ff;
   transform: translateY(-2px);
 }
 .btn-hero:active { transform: scale(0.95); }
 
 /* 推薦歌曲區塊 */
 .suggestion {
-  padding: 120px 20px;
+  padding: 140px 20px;
   background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .suggestion .container {
-  max-width: 600px;
+  max-width: 640px;
   width: 100%;
 }
 
 /* 卡片 */
 .form-card {
-  background: rgba(25, 25, 25, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(25, 25, 25, 0.65);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
-  padding: 50px 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-  border: 1px solid rgba(255,255,255,0.05);
+  padding: 60px 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
   text-align: center;
 }
 .form-card h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
+  margin-bottom: 12px;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #fff;
 }
@@ -81,14 +78,14 @@ body {
 
 /* 表單元素 */
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   text-align: left;
 }
 .form-group label {
   display:block;
   margin-bottom:6px;
   font-size:0.9rem;
-  color:#aaa;
+  color:#777;
 }
 
 /* 輸入框 */
@@ -99,7 +96,7 @@ body {
   background:#1e1e1e;
   color:#eee;
   border:1px solid #333;
-  border-radius:10px;
+  border-radius:12px;
   padding:14px 16px;
   font-size:1rem;
   line-height:1.4;
@@ -112,34 +109,34 @@ body {
   outline:none;
   animation: glow 0.5s ease forwards;
 }
+.input:invalid { border:1px solid #e63946; } /* 錯誤提示 */
+textarea { resize: vertical; }
+
 @keyframes glow {
   from { box-shadow:0 0 0 rgba(0,224,255,0); }
   to   { box-shadow:0 0 12px rgba(0,224,255,0.6); }
 }
-textarea { resize: vertical; }
 
-/* 送出推薦：滿版藍底 */
+/* 送出推薦 */
 .btn-submit {
   display:block;
   width:100%;
-  padding:14px;
+  padding:16px;
   background:#00e0ff;
   color:#000;
   font-weight:600;
   font-size:1rem;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
   transition: all 0.3s ease;
   text-align:center;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  opacity:0;
-  animation: fadeInUp 0.8s ease forwards 0.6s;
 }
 .btn-submit:hover {
   background:#33e8ff;
-  box-shadow:0 0 20px #00e0ff;
+  box-shadow:0 0 24px #00e0ff;
   transform: scale(1.02);
 }
 .btn-submit:active { transform: scale(0.96); }
@@ -149,39 +146,40 @@ textarea { resize: vertical; }
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  animation: ripple-effect 0.9s ease-out; /* 延長到 0.9s，ease-out 柔和 */
-  background-color: rgba(0, 224, 255, 0.35); /* 稍微淡一點藍色 */
+  animation: ripple-effect 0.9s ease-out;
+  background: radial-gradient(circle, rgba(0,224,255,0.6) 0%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%);
   pointer-events: none;
 }
 @keyframes ripple-effect {
   to {
-    transform: scale(4.5); /* 擴散範圍更大 */
+    transform: scale(4.5);
     opacity: 0;
   }
 }
 
-
 /* Footer */
 .footer {
-  padding: 40px 20px;
+  padding: 80px 20px;
   background:#000;
   text-align:center;
   border-top:1px solid #181818;
 }
 .footer p {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   color:#666;
-  font-size:0.8rem;
+  font-size:0.85rem;
 }
 .footer-links {
-  margin-top: 8px;
-  font-size: 0.9rem;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:22px;
 }
 .footer-links a {
-  color:#bbb;
-  margin: 0 10px;
+  color:#888;
+  font-size:0.95rem;
   text-decoration:none;
-  transition:0.3s;
+  transition:color 0.4s ease;
 }
 .footer-links a:hover { color:#00e0ff; }
 
@@ -194,9 +192,9 @@ textarea { resize: vertical; }
 /* 響應式 */
 @media (max-width: 600px) {
   .logo { font-size:2.5rem; }
-  .tagline { font-size:1rem; }
-  .form-card { padding:30px 20px; }
+  .tagline { font-size:1rem; margin-bottom:24px; }
+  .form-card { padding:40px 20px; }
   .btn-hero { font-size:0.95rem; padding:10px 20px; }
-  .btn-submit { font-size:0.95rem; padding:12px; }
+  .btn-submit { font-size:1rem; padding:14px; }
   .input, .textarea { font-size:0.95rem; padding:12px 14px; }
 }
