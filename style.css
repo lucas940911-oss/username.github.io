@@ -19,7 +19,7 @@ body {
   margin:0;
   color:#fff;
   letter-spacing:2px;
-  text-transform:uppercase;
+  /* text-transform: uppercase; 🔥 移除，保留大小寫 */
 }
 .tagline {
   margin:24px 0 32px;
@@ -73,6 +73,7 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.55);
   border: 1px solid rgba(255,255,255,0.08);
   text-align: center;
+  box-sizing: border-box; /* ✅ 防止跑版 */
 }
 .form-card h2 {
   margin-bottom: 12px;
@@ -109,7 +110,7 @@ body {
   font-size:1rem;
   line-height:1.4;
   transition:0.25s;
-  box-sizing:border-box; /* ✅ 不會跑版 */
+  box-sizing:border-box; /* ✅ 不會超出卡片 */
 }
 .input::placeholder, .textarea::placeholder { color:#666; }
 .input:focus, .textarea:focus {
@@ -156,8 +157,10 @@ textarea { resize: vertical; }
 .footer-links {
   display:flex;
   justify-content:center;
-  flex-wrap:wrap;
-  gap:22px;
+  flex-wrap:wrap; /* ✅ 小螢幕會換行 */
+  gap:18px;
+  max-width: 600px;
+  margin:0 auto;
 }
 .footer-links a {
   color:#888;
@@ -174,8 +177,12 @@ textarea { resize: vertical; }
 
 /* 響應式 */
 @media (max-width: 600px) {
-  .logo { font-size:3.2rem; }
-  .tagline { font-size:1rem; margin:20px 0 28px; }
+  .logo { font-size:3rem; }
+  .tagline {
+    font-size:0.9rem;  /* ✅ 手機版自動縮小，塞進一行 */
+    margin:20px 0 28px;
+    white-space: nowrap;
+  }
   .form-card { padding:30px 20px; }
   .btn-hero { font-size:0.9rem; padding:10px 20px; }
   .btn-submit { font-size:0.95rem; padding:14px; }
