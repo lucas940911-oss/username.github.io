@@ -74,25 +74,31 @@ body {
   color:#ccc;
 }
 
+/* 修正輸入框樣式 */
 .input, .textarea {
+  -webkit-appearance: none; /* 移除 iOS 預設樣式 */
+  appearance: none;
+
   width:100%;
-  background:#282828;
+  background:#222;
   color:#eee;
-  border:none;
-  border-radius:30px;
-  padding:14px 18px;
+  border:1px solid #333;
+  border-radius:10px; /* 小圓角，避免膠囊化 */
+  padding:12px 14px;
   font-size:1rem;
-  transition:0.3s;
+  line-height:1.4;
+  transition:0.2s;
 }
 .input::placeholder, .textarea::placeholder { color:#777; }
 .input:focus, .textarea:focus {
-  background:#1f1f1f;
-  box-shadow:0 0 0 2px #00e0ff;
+  border:1px solid #00e0ff;
+  box-shadow:0 0 6px rgba(0,224,255,0.4) inset,
+             0 0 6px rgba(0,224,255,0.6);
   outline:none;
 }
 textarea {
   resize: vertical;
-  border-radius:16px;
+  border-radius:10px;
 }
 button.btn { cursor: pointer; }
 
