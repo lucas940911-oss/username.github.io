@@ -19,63 +19,74 @@ body {
 }
 .tagline { margin:14px 0 24px; color:#bbb; font-size:1.3rem; font-weight:300; }
 
-/* 主按鈕 - 藍黑白 pill-style */
+/* 主按鈕 */
 .btn {
   display:block;
-  width:100%; /* 滿版按鈕，對齊輸入框 */
+  width:100%;
   padding:14px;
   background:#00e0ff;
   color:#000;
   text-decoration:none;
   font-weight:600;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   font-size:1rem;
   text-align:center;
   transition:0.3s;
 }
-.btn:hover { background:#33e8ff; color:#000; box-shadow:0 0 20px #00e0ff; cursor:pointer; }
+.btn:hover {
+  background:#33e8ff;
+  box-shadow:0 0 20px #00e0ff;
+  cursor:pointer;
+}
 
-/* 粉絲推薦歌曲區塊 */
+/* 推薦歌曲區塊 */
 .suggestion {
-  padding: 100px 20px;
-  background:#121212;
-  color:#fff;
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .suggestion .container {
-  max-width: 500px; /* 限制寬度更精緻 */
-  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
 }
 
+/* 卡片 */
 .form-card {
-  background: linear-gradient(145deg, #181818, #1f1f1f);
-  border-radius:16px;
-  padding:40px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.6);
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
 }
 
-.suggestion h2 {
-  margin-bottom:10px;
-  font-size:1.9rem;
-  font-weight:700;
-  text-align:center;
+.form-card h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
 }
 .form-sub {
-  margin-bottom:30px;
-  font-size:1rem;
-  color:#bbb;
-  text-align:center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  color: #bbb;
 }
 
+/* 表單元素 */
 .form-group {
-  margin-bottom:20px;
+  margin-bottom: 24px;
+  text-align: left;
 }
 .form-group label {
   display:block;
   margin-bottom:6px;
   font-size:0.9rem;
   color:#aaa;
-  text-align:left;
 }
 
 /* 輸入框 */
@@ -83,26 +94,24 @@ body {
   -webkit-appearance: none;
   appearance: none;
   width:100%;
-  background:#222;
+  background:#1e1e1e;
   color:#eee;
   border:1px solid #333;
-  border-radius:8px;
-  padding:12px 14px;
+  border-radius:10px;
+  padding:14px 16px;
   font-size:1rem;
   line-height:1.4;
-  transition:0.2s;
+  transition:0.25s;
 }
 .input::placeholder, .textarea::placeholder { color:#666; }
 .input:focus, .textarea:focus {
   border:1px solid #00e0ff;
-  box-shadow:0 0 6px rgba(0,224,255,0.4);
+  box-shadow:0 0 12px rgba(0,224,255,0.4);
   outline:none;
 }
-textarea {
-  resize: vertical;
-}
+textarea { resize: vertical; }
 
-/* Footer 藍黑白高級風 */
+/* Footer */
 .footer {
   padding: 40px 20px;
   background:#000;
