@@ -21,16 +21,20 @@ body {
 
 /* 主按鈕 - 藍黑白 pill-style */
 .btn {
-  padding:14px 32px; 
-  background:#00e0ff; 
-  color:#000; 
-  text-decoration:none; 
+  display:block;
+  width:100%; /* 滿版按鈕，對齊輸入框 */
+  padding:14px;
+  background:#00e0ff;
+  color:#000;
+  text-decoration:none;
   font-weight:600;
   border:none;
-  border-radius:30px;
+  border-radius:8px;
+  font-size:1rem;
+  text-align:center;
   transition:0.3s;
 }
-.btn:hover { background:#33e8ff; color:#000; box-shadow:0 0 20px #00e0ff; }
+.btn:hover { background:#33e8ff; color:#000; box-shadow:0 0 20px #00e0ff; cursor:pointer; }
 
 /* 粉絲推薦歌曲區塊 */
 .suggestion {
@@ -39,14 +43,14 @@ body {
   color:#fff;
 }
 .suggestion .container {
-  max-width: 700px;
+  max-width: 500px; /* 限制寬度更精緻 */
   margin: 0 auto;
 }
 
 .form-card {
   background: linear-gradient(145deg, #181818, #1f1f1f);
   border-radius:16px;
-  padding:50px 40px;
+  padding:40px;
   box-shadow:0 8px 30px rgba(0,0,0,0.6);
 }
 
@@ -57,21 +61,21 @@ body {
   text-align:center;
 }
 .form-sub {
-  margin-bottom:35px;
+  margin-bottom:30px;
   font-size:1rem;
   color:#bbb;
   text-align:center;
 }
 
 .form-group {
-  margin-bottom:24px;
-  text-align:left;
+  margin-bottom:20px;
 }
 .form-group label {
   display:block;
   margin-bottom:6px;
   font-size:0.9rem;
   color:#aaa;
+  text-align:left;
 }
 
 /* 輸入框 */
@@ -82,8 +86,8 @@ body {
   background:#222;
   color:#eee;
   border:1px solid #333;
-  border-radius:12px;
-  padding:14px 16px;
+  border-radius:8px;
+  padding:12px 14px;
   font-size:1rem;
   line-height:1.4;
   transition:0.2s;
@@ -91,14 +95,12 @@ body {
 .input::placeholder, .textarea::placeholder { color:#666; }
 .input:focus, .textarea:focus {
   border:1px solid #00e0ff;
-  box-shadow:0 0 10px rgba(0,224,255,0.4);
+  box-shadow:0 0 6px rgba(0,224,255,0.4);
   outline:none;
 }
 textarea {
   resize: vertical;
-  border-radius:12px;
 }
-button.btn { cursor: pointer; }
 
 /* Footer 藍黑白高級風 */
 .footer {
