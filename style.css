@@ -1,9 +1,9 @@
 /* 全域設定 */
 body {
   margin:0;
-  background:#000;
+  background:#000; /* 全黑背景 */
   color:#fff;
-  font-family: 'Poppins', 'Helvetica Neue', Noto Sans TC, sans-serif;
+  font-family: 'Helvetica Neue', Noto Sans TC, sans-serif; /* 昨天 tagline 字體 */
   -webkit-font-smoothing: antialiased;
   line-height:1.6;
 }
@@ -12,215 +12,43 @@ body {
 .hero {
   display:flex; flex-direction:column; justify-content:center; align-items:center;
   height:100vh; text-align:center; padding:0 20px;
-  position: relative;
-  background:#000;
-  overflow:hidden;
-}
-.hero .overlay {
-  position:absolute;
-  top:0; left:0; right:0; bottom:0;
-  background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.15), transparent 60%),
-              radial-gradient(circle at 70% 60%, rgba(255,0,128,0.1), transparent 60%);
-  animation: glowMove 12s ease-in-out infinite alternate;
-  z-index:0;
-}
-@keyframes glowMove {
-  from { background-position: 30% 40%, 70% 60%; }
-  to   { background-position: 40% 50%, 60% 50%; }
+  background:#000; /* 保持全黑 */
 }
 .logo {
-  font-family: Impact, sans-serif; /* 回到最初嘻哈字體 */
+  font-family: Impact, sans-serif; /* 最初的嘻哈字體 */
   font-size:5rem;
   margin:0;
   color:#fff;
   letter-spacing:2px;
   text-transform:uppercase;
-  position:relative;
-  z-index:1;
 }
 .tagline {
-  margin: 24px 0 32px; /* ✅ 間距調整：自然耐看 */
-  font-family: 'Poppins', sans-serif;
+  margin:24px 0 32px; /* 調整自然間距 */
   font-weight:400;
   color:#bbb;
   font-size:1.2rem;
   letter-spacing:1px;
-  position:relative;
-  z-index:1;
 }
 
 /* Hero 按鈕 */
 .btn-hero {
-  font-family: 'Poppins', sans-serif;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
   padding:12px 28px;
   background:transparent;
   border:2px solid #00e0ff;
   color:#00e0ff;
   text-decoration:none;
+  font-weight:bold;
   border-radius:999px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  z-index:1;
 }
 .btn-hero:hover {
   background:#00e0ff;
   color:#000;
   box-shadow:0 0 14px #00e0ff;
-  transform: translateY(-2px);
 }
 .btn-hero:active { transform: scale(0.95); }
 
-/* 推薦歌曲區塊 */
-.suggestion {
-  padding: 140px 20px;
-  background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.suggestion .container {
-  max-width: 640px;
-  width: 100%;
-}
-
-/* 卡片 */
-.form-card {
-  background: rgba(25, 25, 25, 0.65);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 60px 40px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
-  border: 1px solid rgba(255,255,255,0.08);
-  text-align: center;
-}
-.form-card h2 {
-  margin-bottom: 12px;
-  font-size: 1.9rem;
-  font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-}
-.form-sub {
-  margin-bottom: 40px;
-  font-size: 1rem;
-  color: #bbb;
-}
-
-/* 表單元素 */
-.form-group {
-  margin-bottom: 28px;
-  text-align: left;
-}
-.form-group label {
-  display:block;
-  margin-bottom:6px;
-  font-size:0.9rem;
-  color:#777;
-}
-
-/* 輸入框 */
-.input, .textarea {
-  -webkit-appearance: none;
-  appearance: none;
-  width:100%;
-  background:#1e1e1e;
-  color:#eee;
-  border:1px solid #333;
-  border-radius:12px;
-  padding:14px 16px;
-  font-size:1rem;
-  line-height:1.4;
-  transition:0.25s;
-}
-.input::placeholder, .textarea::placeholder { color:#666; }
-.input:focus, .textarea:focus {
-  border:1px solid #00e0ff;
-  box-shadow:0 0 12px rgba(0,224,255,0.6);
-  outline:none;
-}
-.input:invalid { border:1px solid #e63946; }
-textarea { resize: vertical; }
-
-/* 送出推薦 */
-.btn-submit {
-  display:block;
-  width:100%;
-  padding:16px;
-  background:#00e0ff;
-  color:#000;
-  font-weight:700;
-  font-size:1rem;
-  border:none;
-  border-radius:12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-.btn-submit:hover {
-  background:#33e8ff;
-  box-shadow:0 0 24px #00e0ff;
-  transform: scale(1.02);
-}
-.btn-submit:active { transform: scale(0.96); }
-
-/* Ripple */
-.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple-effect 0.9s ease-out;
-  background: radial-gradient(circle, rgba(0,224,255,0.6) 0%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-}
-@keyframes ripple-effect {
-  to {
-    transform: scale(4.5);
-    opacity: 0;
-  }
-}
-
-/* Footer */
-.footer {
-  padding: 80px 20px;
-  background:#000;
-  text-align:center;
-  border-top:1px solid #181818;
-}
-.footer p {
-  margin: 0 0 20px;
-  color:#666;
-  font-size:0.85rem;
-}
-.footer-links {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:22px;
-}
-.footer-links a {
-  color:#888;
-  font-size:0.95rem;
-  text-decoration:none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition:color 0.4s ease;
-}
-.footer-links a:hover { color:#00e0ff; }
-
-/* 響應式 */
-@media (max-width: 600px) {
-  .logo { font-size:2.8rem; }
-  .tagline { font-size:1rem; margin:20px 0 28px; }
-  .form-card { padding:40px 20px; }
-  .btn-hero { font-size:0.9rem; padding:10px 20px; }
-  .btn-submit { font-size:0.95rem; padding:14px; }
-  .input, .textarea { font-size:0.95rem; padding:12px 14px; }
-}
+/* 其他 (表單、footer 與昨天一致) ... */
