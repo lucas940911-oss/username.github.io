@@ -2,92 +2,100 @@
 body {
   margin:0;
   background:#000;
-  color:#eee;
+  color:#fff;
   font-family: 'Helvetica Neue', Noto Sans TC, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Hero */
 .hero {
   display:flex; flex-direction:column; justify-content:center; align-items:center;
   height:100vh; text-align:center; padding:0 20px;
-  background:#000;
+  background:linear-gradient(180deg, #000 0%, #121212 100%);
 }
 .logo {
   font-family: Impact, sans-serif;
-  font-size:4rem; margin:0; color:#fff;
+  font-size:5rem; margin:0; color:#fff; letter-spacing: 1px;
 }
-.tagline { margin:10px 0 20px; color:#bbb; font-size:1.2rem; }
+.tagline { margin:14px 0 24px; color:#bbb; font-size:1.3rem; font-weight:300; }
 
-/* 主按鈕 */
+/* 主按鈕 - 藍黑白 pill-style */
 .btn {
-  padding:12px 24px; 
-  background:transparent; 
-  border:2px solid #00e0ff; 
-  color:#00e0ff; 
+  padding:14px 32px; 
+  background:#00e0ff; 
+  color:#000; 
   text-decoration:none; 
-  font-weight:bold;
-  border-radius:6px;
+  font-weight:600;
+  border:none;
+  border-radius:30px; /* pill style */
   transition:0.3s;
 }
-.btn:hover { background:#00e0ff; color:#000; box-shadow:0 0 12px #00e0ff; }
+.btn:hover { background:#33e8ff; color:#000; box-shadow:0 0 20px #00e0ff; }
 
-/* 表單樣式 */
-.form {
-  max-width: 480px;
-  margin: 0 auto;
-  text-align: left;
+/* 卡片區塊 */
+.songs, .merch, .dark { padding:60px 20px; background:#121212; }
+.songs h2, .merch h2, .section-title { text-align:left; margin:0 0 30px; font-size:1.8rem; color:#fff; }
+
+.grid {
+  display:grid; gap:24px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
+.card {
+  background:#181818; padding:20px; border-radius:12px;
+  text-align:left; transition:0.3s;
+}
+.card:hover { background:#1f1f1f; transform:translateY(-3px); box-shadow:0 4px 20px rgba(0,224,255,0.3); }
+.card img { width:100%; border-radius:8px; margin-bottom:15px; }
+.card h3 { margin:10px 0; font-size:1rem; color:#fff; font-weight:500; }
+
+/* 表單 */
+.form { max-width: 480px; margin: 0 auto; }
 .form-group { margin-bottom: 15px; }
 .input, .textarea {
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background:#181818;
   color: #eee;
-  border: 1px solid #444;
+  border: none;
   border-radius: 6px;
-  padding: 12px 14px;
+  padding: 14px;
   font-size: 1rem;
-  transition: 0.3s;
+  transition:0.3s;
 }
 .input::placeholder, .textarea::placeholder { color:#777; }
 .input:focus, .textarea:focus {
-  border-color: #00e0ff;
-  box-shadow: 0 0 8px #00e0ff;
+  background:#1f1f1f;
+  box-shadow:0 0 0 2px #00e0ff;
   outline: none;
 }
 textarea { resize: vertical; }
+button.btn { cursor: pointer; }
 
-/* Footer 極簡風 */
+/* Footer 藍黑白高級風 */
 .footer {
   padding: 40px 20px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #777;
-  background: #000;
-  border-top: 1px solid #111;
+  background:#000;
+  text-align:center;
+  border-top:1px solid #181818;
 }
 .footer p {
-  margin: 0 0 6px;
-  color: #666;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+  color:#666;
+  font-size:0.8rem;
 }
 .footer-links {
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 0.9rem;
-  letter-spacing: 0.3px;
 }
 .footer-links a {
-  color: #aaa;
-  margin: 0 6px;
-  transition: 0.3s;
+  color:#bbb;
+  margin: 0 10px;
+  text-decoration:none;
+  transition:0.3s;
 }
-.footer-links a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+.footer-links a:hover { color:#00e0ff; }
 
-/* 響應式設計 */
+/* 響應式 */
 @media (max-width: 600px) {
-  .logo { font-size:2.5rem; }
+  .logo { font-size:3rem; }
   .tagline { font-size:1rem; }
 }
