@@ -15,23 +15,28 @@
   </section>
 
   <!-- Fan Suggestion Form -->
-  <section class="about">
-    <h2>粉絲推薦歌曲</h2>
-    <p>告訴我們你想看的歌詞翻譯！</p>
-    <form action="mailto:labelpworkspace@gmail.com" method="POST" enctype="text/plain" class="form">
-      <div class="form-group">
-        <input type="text" name="歌手" class="input" placeholder="歌手名稱" required>
-      </div>
-      <div class="form-group">
-        <input type="text" name="歌曲" class="input" placeholder="歌曲名稱" required>
-      </div>
-      <div class="form-group">
-        <textarea name="訊息" class="textarea" rows="3" placeholder="想說的話..."></textarea>
-      </div>
-      <div class="center">
-        <button type="submit" class="btn">送出推薦</button>
-      </div>
-    </form>
+  <section class="suggestion">
+    <div class="form-card">
+      <h2>粉絲推薦歌曲</h2>
+      <p class="form-sub">告訴我們你想看的歌詞翻譯 🎶</p>
+      <form action="mailto:labelpworkspace@gmail.com" method="POST" enctype="text/plain" class="form">
+        <div class="form-group">
+          <label for="artist">歌手名稱</label>
+          <input type="text" id="artist" name="歌手" class="input" placeholder="例如：Drake" required>
+        </div>
+        <div class="form-group">
+          <label for="song">歌曲名稱</label>
+          <input type="text" id="song" name="歌曲" class="input" placeholder="例如：God's Plan" required>
+        </div>
+        <div class="form-group">
+          <label for="msg">想說的話</label>
+          <textarea id="msg" name="訊息" class="textarea" rows="3" placeholder="留言給我們..."></textarea>
+        </div>
+        <div class="center">
+          <button type="submit" class="btn">送出推薦</button>
+        </div>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -47,4 +52,3 @@
   </footer>
 </body>
 </html>
- 
