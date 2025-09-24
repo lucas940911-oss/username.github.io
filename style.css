@@ -19,28 +19,25 @@ body {
 }
 .tagline { margin:14px 0 24px; color:#bbb; font-size:1.3rem; font-weight:300; }
 
-/* 主按鈕 */
+/* Hero 專用按鈕（小） */
 .btn {
-  display:block;
-  width:100%;
-  padding:14px;
-  background:#00e0ff;
-  color:#000;
-  text-decoration:none;
-  font-weight:600;
-  border:none;
-  border-radius:10px;
-  font-size:1rem;
-  text-align:center;
+  padding:12px 24px; 
+  background:transparent; 
+  border:2px solid #00e0ff; 
+  color:#00e0ff; 
+  text-decoration:none; 
+  font-weight:bold;
+  border-radius:6px;  /* 小圓角 */
   transition:0.3s;
+  display:inline-block;
 }
 .btn:hover {
-  background:#33e8ff;
-  box-shadow:0 0 20px #00e0ff;
-  cursor:pointer;
+  background:#00e0ff; 
+  color:#000; 
+  box-shadow:0 0 12px #00e0ff;
 }
 
-/* 推薦歌曲區塊 */
+/* 粉絲推薦歌曲區塊 */
 .suggestion {
   padding: 120px 20px;
   background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
@@ -110,6 +107,26 @@ body {
   outline:none;
 }
 textarea { resize: vertical; }
+
+/* 表單送出按鈕（大滿版） */
+.btn-submit {
+  display:block;
+  width:100%;
+  padding:14px;
+  background:#00e0ff;
+  color:#000;
+  font-weight:600;
+  font-size:1rem;
+  border:none;
+  border-radius:10px;  /* 比較圓 */
+  transition:0.3s;
+  text-align:center;
+}
+.btn-submit:hover {
+  background:#33e8ff;
+  box-shadow:0 0 20px #00e0ff;
+  cursor:pointer;
+}
 
 /* Footer */
 .footer {
