@@ -149,16 +149,17 @@ textarea { resize: vertical; }
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  animation: ripple-effect 0.6s linear;
-  background-color: rgba(0, 224, 255, 0.4); /* 品牌藍色水波紋 */
+  animation: ripple-effect 0.9s ease-out; /* 延長到 0.9s，ease-out 柔和 */
+  background-color: rgba(0, 224, 255, 0.35); /* 稍微淡一點藍色 */
   pointer-events: none;
 }
 @keyframes ripple-effect {
   to {
-    transform: scale(4);
+    transform: scale(4.5); /* 擴散範圍更大 */
     opacity: 0;
   }
 }
+
 
 /* Footer */
 .footer {
