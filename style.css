@@ -19,15 +19,15 @@ body {
 }
 .tagline { margin:14px 0 24px; color:#bbb; font-size:1.3rem; font-weight:300; }
 
-/* Hero 專用按鈕 */
+/* Hero 專用按鈕：小膠囊藍框 */
 .btn-hero {
-  padding:12px 24px; 
+  padding:10px 26px; 
   background:transparent; 
   border:2px solid #00e0ff; 
   color:#00e0ff; 
   text-decoration:none; 
   font-weight:bold;
-  border-radius:6px;  
+  border-radius:999px;   /* 膠囊狀 */
   transition: all 0.3s ease;
   display:inline-block;
   opacity:0;
@@ -40,7 +40,7 @@ body {
   transform: translateY(-2px);
 }
 .btn-hero:active {
-  transform: scale(0.97);
+  transform: scale(0.95);
   transition: transform 0.1s ease;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 textarea { resize: vertical; }
 
-/* 表單送出按鈕 */
+/* 表單送出按鈕：滿版矩形藍底 */
 .btn-submit {
   display:block;
   width:100%;
@@ -132,7 +132,7 @@ textarea { resize: vertical; }
 .btn-submit:hover {
   background:#33e8ff;
   box-shadow:0 0 20px #00e0ff;
-  transform: scale(1.03);
+  transform: scale(1.02);
   cursor:pointer;
 }
 .btn-submit:active {
