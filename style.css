@@ -2,7 +2,7 @@
 body {
   margin:0;
   background:#000;
-  color:#eee; /* 柔和灰白，避免長文刺眼 */
+  color:#eee;
   font-family: 'Helvetica Neue', Noto Sans TC, sans-serif;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 .logo {
   font-family: Impact, sans-serif;
-  font-size:4rem; margin:0; color:#fff; /* 保持標誌純白 */
+  font-size:4rem; margin:0; color:#fff;
 }
 .tagline { margin:10px 0 20px; color:#bbb; font-size:1.2rem; }
 
@@ -30,43 +30,6 @@ body {
   transition:0.3s;
 }
 .btn:hover { background:#00e0ff; color:#000; box-shadow:0 0 12px #00e0ff; }
-
-/* 卡片區塊 */
-.songs, .merch, .dark { padding:60px 20px; background:#111; }
-.songs h2, .merch h2, .section-title { text-align:center; margin-bottom:30px; font-size:2rem; color:#fff; }
-
-.grid {
-  display:grid; gap:20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-.card {
-  background:#000; padding:20px; border:1px solid #333; border-radius:12px;
-  text-align:center; transition:0.3s;
-}
-.card:hover { box-shadow:0 0 20px #00e0ff; }
-.card img { 
-  width:100%; 
-  aspect-ratio: 1/1; /* 固定比例為正方形 */
-  object-fit: cover; 
-  border-radius:8px; 
-  margin-bottom:15px; 
-}
-.card h3 { margin:10px 0; font-size:1.1rem; color:#fff; }
-
-/* 次要按鈕 */
-.btn-outline {
-  display:inline-block; padding:8px 16px; 
-  border:1px solid #e600ff; color:#e600ff; 
-  text-decoration:none;
-  border-radius:6px;
-  transition:0.3s;
-}
-.btn-outline:hover { background:#e600ff; color:#000; }
-
-/* About 區塊 */
-.about { padding:60px 20px; background:#fff; color:#000; text-align:center; }
-.about h2 { margin-bottom:20px; font-size:2rem; }
-.about p { max-width:600px; margin:0 auto; line-height:1.6; color:#333; }
 
 /* 表單樣式 */
 .form {
@@ -93,29 +56,38 @@ body {
 }
 textarea { resize: vertical; }
 
-/* Footer 導覽 */
+/* Footer 極簡風 */
 .footer {
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 0.85rem;
+  color: #777;
   background: #000;
+  border-top: 1px solid #111;
 }
-.footer p { margin: 8px 0; }
-.footer a {
-  color: #00e0ff;
-  text-decoration: none;
-  margin: 0 10px;
+.footer p {
+  margin: 0 0 6px;
+  color: #666;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+.footer-links {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+.footer-links a {
+  color: #aaa;
+  margin: 0 6px;
   transition: 0.3s;
 }
-.footer a:hover {
-  text-decoration: underline;
+.footer-links a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 /* 響應式設計 */
 @media (max-width: 600px) {
   .logo { font-size:2.5rem; }
   .tagline { font-size:1rem; }
-  .songs h2, .merch h2, .about h2 { font-size:1.5rem; }
 }
