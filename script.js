@@ -13,6 +13,6 @@ document.querySelectorAll('.btn-hero, .btn-submit').forEach(button => {
 
     setTimeout(() => {
       circle.remove();
-    }, 600);
+    }, 900);
   });
 });
