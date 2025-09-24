@@ -29,7 +29,7 @@ body {
   to   { background-position: 40% 50%, 60% 50%; }
 }
 .logo {
-  font-family: 'Anton', Impact, sans-serif;
+  font-family: Impact, sans-serif; /* 回到最初嘻哈字體 */
   font-size:5rem;
   margin:0;
   color:#fff;
@@ -39,7 +39,7 @@ body {
   z-index:1;
 }
 .tagline {
-  margin:14px 0 40px;
+  margin: 24px 0 32px; /* ✅ 間距調整：自然耐看 */
   font-family: 'Poppins', sans-serif;
   font-weight:400;
   color:#bbb;
@@ -218,7 +218,7 @@ textarea { resize: vertical; }
 /* 響應式 */
 @media (max-width: 600px) {
   .logo { font-size:2.8rem; }
-  .tagline { font-size:1rem; margin-bottom:24px; }
+  .tagline { font-size:1rem; margin:20px 0 28px; }
   .form-card { padding:40px 20px; }
   .btn-hero { font-size:0.9rem; padding:10px 20px; }
   .btn-submit { font-size:0.95rem; padding:14px; }
